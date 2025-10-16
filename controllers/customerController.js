@@ -1,12 +1,12 @@
 import Customer from "../models/Customer.js";
-// Get All Books
+// Get All Customer
 const getAllCustomers = async (req, res) => {
   try {
-    const Customers = await Customer.find();
+    const customers = await Customer.find();
     res.json({
       success: true,
-      count: Customers.length,
-      data: Customers,
+      count: customers.length,
+      data: customers,
     });
   } catch (error) {
     res.status(500).json({
