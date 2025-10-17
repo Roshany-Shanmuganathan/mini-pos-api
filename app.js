@@ -11,7 +11,7 @@ app.use(express.json());
 
 connectDB();
 
-app.get("/users", (req, res) => {
+app.get("/", (req, res) => {
   res.send("welcom to mini-pos-api");
 });
 
