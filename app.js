@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./cofig/db.js";
 import customerRoutes from "./routes/customerRoutes.js";
 import itemRoutes from "./routes/itemRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -13,6 +14,7 @@ connectDB();
 
 app.use("/api/customers", customerRoutes);
 app.use("/api/items", itemRoutes);
+app.use("/api/users", authRoutes);
 
 app.listen(PORT, () =>
   console.log(`Server is running on http://localhost:${PORT}`)
