@@ -11,6 +11,10 @@ app.use(express.json());
 
 connectDB();
 
+app.get("/users", (req, res) => {
+  res.send("welcom to mini-pos-api");
+});
+
 app.use("/api/customers", customerRoutes);
 app.use("/api/items", itemRoutes);
 app.use("/api/users", authRoutes);
